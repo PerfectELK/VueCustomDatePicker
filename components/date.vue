@@ -1,6 +1,7 @@
 <template>
     <div class="datePicker__container">
-        <input class="input__date" type="text" :value="inputValue" @click="showTimeWindow()" readonly>
+        <input class="input__date" type="text"  @click="showTimeWindow()" v-model="inputValue
+" readonly >
         <div class="time-window" v-if="modalOpen">
             <div class="control__panel">
                 <button class="control__panel-left" @click="minusMonth()"></button>
@@ -10,6 +11,7 @@
                 <button class="control__panel-right" @click="plusMonth()"></button>
             </div>
             <div class="day__table">
+                <button class="day__table-item" v-for="week in DayOfWeek">{{week}}</button>
                 <button class="day__table-item" v-for="day in DayArray" @click="setDay(day)">{{ day }}</button>
             </div>
         </div>
@@ -28,9 +30,22 @@
                 inputValue:"",
                 DayArray:[],
                 modalOpen:false,
+                DayOfWeek:['пн','вт','ср',"чт","пт","сб","вс"],
             }
         },
+        props:['value'],
         methods:{
+            updateValue:function(value){
+                this.$emit('input',value);
+            },
+            MarginForDayOfWeek:function(){
+                let date = new Date(this.currentYear,this.currentMonth,1).getDay();
+                let a = [];
+                for(let j = 1; j <  date; j++){
+                    a.push("");
+                }
+                this.DayArray = a.concat(this.DayArray);
+            },
             minusMonth:function(){
                 this.currentDay = 1;
                 if(this.currentMonth != 0){
@@ -42,6 +57,7 @@
                 this.dayInMonth();
                 this.setValueOnInput();
                 this.createDayArray();
+                this.MarginForDayOfWeek();
             },
             plusMonth:function(){
                 this.currentDay = 1;
@@ -54,18 +70,19 @@
                 this.dayInMonth();
                 this.setValueOnInput();
                 this.createDayArray();
+                this.MarginForDayOfWeek();
             },
             setDay:function(day){
                 this.currentDay = day;
                 this.setValueOnInput();
-                console.log(this.currentDay);
                 this.showTimeWindow();
             },
             dayInMonth:function(){
                 return 33 - new Date(this.currentYear, this.currentMonth, 33).getDate()
             },
             setValueOnInput:function(){
-                this.inputValue = this.currentDay + "-" + this.getCurrentMonth() + "-" + this.currentYear;
+                this.inputValue = this.getCurrentDay() + "-" + this.getCurrentMonth() + "-" + this.currentYear;
+                this.updateValue(this.inputValue);
             },
             getCurrentMonth:function(){
                 if((this.currentMonth + 1) <= 9){
@@ -73,6 +90,14 @@
                     return "0" + cm
                 }else{
                     return this.currentMonth + 1;
+                }
+            },
+            getCurrentDay:function(){
+                if((this.currentDay) <= 9){
+                    let cm = this.currentDay;
+                    return "0" + cm
+                }else{
+                    return this.currentDay;
                 }
             },
             showTimeWindow:function(){
@@ -89,24 +114,28 @@
         created(){
             this.setValueOnInput();
             this.createDayArray();
+            this.MarginForDayOfWeek();
         }
     }
 </script>
 
 <style>
     .time-window{
-        max-width: 180px;
         margin: 0 auto;
         position: absolute;
+        top:0;
+        left:0;
         z-index: 1000;
         background-color:#dddddd ;
     }
     .datePicker__container{
         max-width: 200px;
         text-align: center;
+        position: relative;
     }
     .day__table{
-        max-width: 180px;
+        width: 280px;
+        text-align: left;
     }
     .control__panel > button{
         width:30px;
@@ -115,14 +144,16 @@
         padding: 0;
         outline: none;
         position: relative;
+
     }
     .control__panel{
         max-width: 180px;
         text-align: center;
+        margin: 0 auto;
     }
     .day__table-item{
-        width:30px;
-        height: 30px;
+        width:14%;
+        height: 40px;
         border: none;
         padding: 0;
         outline: none;

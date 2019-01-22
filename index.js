@@ -4,9 +4,15 @@ const Date = require('vue!./components/date.vue');
 new Vue({
    el:"#app",
    data:{
-       test:"Hello"
+       test:""
    },
    components:{
        pelkDate:Date,
+   },
+    methods:{
+
+    },
+   created(){
+
    }
 });
