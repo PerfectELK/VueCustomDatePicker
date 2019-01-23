@@ -12,7 +12,7 @@
             </div>
             <div class="day__table">
                 <button class="day__table-item" v-for="week in DayOfWeek">{{week}}</button>
-                <button class="day__table-item" v-for="day in DayArray" @click="setDay(day)">{{ day }}</button>
+                <button class="day__table-item" v-for="day in DayArray" v-bind:class="{isDayActive:day.current}" @click="setDay(day.day)">{{ day.day }}</button>
             </div>
         </div>
     </div>
@@ -41,9 +41,7 @@
             MarginForDayOfWeek:function(){
                 let date = new Date(this.currentYear,this.currentMonth,1).getDay();
                 let a = [];
-                for(let j = 1; j <  date; j++){
-                    a.push("");
-                }
+                for(let j = 1; j <  date; j++) {a.push("\u00A0");}
                 this.DayArray = a.concat(this.DayArray);
             },
             minusMonth:function(){
@@ -75,6 +73,8 @@
             setDay:function(day){
                 this.currentDay = day;
                 this.setValueOnInput();
+                this.createDayArray();
+                this.MarginForDayOfWeek();
                 this.showTimeWindow();
             },
             dayInMonth:function(){
@@ -106,7 +106,11 @@
             createDayArray:function(){
                 let j = [];
                 for(let i = 1; i <= this.dayInMonth();i++){
-                    j.push(i);
+                    if(this.currentDay == i){
+                        j.push({day:i,current:true});
+                    }else{
+                        j.push({day:i,current:false});
+                    }
                 }
                 this.DayArray = j;
             }
@@ -123,18 +127,19 @@
     .time-window{
         margin: 0 auto;
         position: absolute;
+        width:100%;
         top:0;
         left:0;
         z-index: 1000;
         background-color:#dddddd ;
     }
     .datePicker__container{
-        max-width: 200px;
+        max-width: 100%;
         text-align: center;
         position: relative;
     }
     .day__table{
-        width: 280px;
+        width: 100%;
         text-align: left;
     }
     .control__panel > button{
@@ -145,6 +150,9 @@
         outline: none;
         position: relative;
 
+    }
+    .isDayActive{
+        background-color: #adcbfb;
     }
     .control__panel{
         max-width: 180px;
@@ -167,7 +175,7 @@
     .control__panel-left::before{
         content: "";
         width: 50%;
-        height: 2px;
+        height: 1px;
         border-radius: 20px;
         background-color: #000;
         position: absolute;
@@ -178,7 +186,7 @@
     .control__panel-left::after{
         content: "";
         width: 50%;
-        height: 2px;
+        height: 1px;
         border-radius: 20px;
         background-color: #000;
         position: absolute;
@@ -189,7 +197,7 @@
     .control__panel-right::before{
         content: "";
         width: 50%;
-        height: 2px;
+        height: 1px;
         border-radius: 20px;
         background-color: #000;
         position: absolute;
@@ -200,7 +208,7 @@
     .control__panel-right::after{
         content: "";
         width: 50%;
-        height: 2px;
+        height: 1px;
         border-radius: 20px;
         background-color: #000;
         position: absolute;

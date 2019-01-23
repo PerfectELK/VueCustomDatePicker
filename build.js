@@ -11677,7 +11677,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.time-window{\n    margin: 0 auto;\n    position: absolute;\n    top:0;\n    left:0;\n    z-index: 1000;\n    background-color:#dddddd ;\n}\n.datePicker__container{\n    max-width: 200px;\n    text-align: center;\n    position: relative;\n}\n.day__table{\n    width: 280px;\n    text-align: left;\n}\n.control__panel > button{\n    width:30px;\n    height: 30px;\n    border: none;\n    padding: 0;\n    outline: none;\n    position: relative;\n\n}\n.control__panel{\n    max-width: 180px;\n    text-align: center;\n    margin: 0 auto;\n}\n.day__table-item{\n    width:14%;\n    height: 40px;\n    border: none;\n    padding: 0;\n    outline: none;\n}\n.day__table-item:active{\n    background-color: #adcbfb;\n}\n.day__table-item:focus{\n    background-color: #adcbfb;\n}\n.control__panel-left::before{\n    content: \"\";\n    width: 50%;\n    height: 2px;\n    border-radius: 20px;\n    background-color: #000;\n    position: absolute;\n    top:35%;\n    left:50%;\n    transform: translate(-50%,-50%) rotate(-45deg);\n}\n.control__panel-left::after{\n    content: \"\";\n    width: 50%;\n    height: 2px;\n    border-radius: 20px;\n    background-color: #000;\n    position: absolute;\n    top:69%;\n    left:50%;\n    transform: translate(-50%,-50%) rotate(45deg);\n}\n.control__panel-right::before{\n    content: \"\";\n    width: 50%;\n    height: 2px;\n    border-radius: 20px;\n    background-color: #000;\n    position: absolute;\n    top:35%;\n    left:50%;\n    transform: translate(-50%,-50%) rotate(45deg);\n}\n.control__panel-right::after{\n    content: \"\";\n    width: 50%;\n    height: 2px;\n    border-radius: 20px;\n    background-color: #000;\n    position: absolute;\n    top:69%;\n    left:50%;\n    transform: translate(-50%,-50%) rotate(-45deg);\n}\n.control__panel-select_date{\n    height: auto;\n    width: 100px;\n    display: inline-block;\n    font-size: 19px;\n    vertical-align: top;\n    margin-top: 4px;\n}\n.input__date{\n    width:100%;\n    outline: none;\n    height: 25px;\n    font-size: 23px;\n    border: 0.5px solid #d7d2fb;\n    text-align: center;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.time-window{\n    margin: 0 auto;\n    position: absolute;\n    width:100%;\n    top:0;\n    left:0;\n    z-index: 1000;\n    background-color:#dddddd ;\n}\n.datePicker__container{\n    max-width: 100%;\n    text-align: center;\n    position: relative;\n}\n.day__table{\n    width: 100%;\n    text-align: left;\n}\n.control__panel > button{\n    width:30px;\n    height: 30px;\n    border: none;\n    padding: 0;\n    outline: none;\n    position: relative;\n\n}\n.isDayActive{\n    background-color: #adcbfb;\n}\n.control__panel{\n    max-width: 180px;\n    text-align: center;\n    margin: 0 auto;\n}\n.day__table-item{\n    width:14%;\n    height: 40px;\n    border: none;\n    padding: 0;\n    outline: none;\n}\n.day__table-item:active{\n    background-color: #adcbfb;\n}\n.day__table-item:focus{\n    background-color: #adcbfb;\n}\n.control__panel-left::before{\n    content: \"\";\n    width: 50%;\n    height: 1px;\n    border-radius: 20px;\n    background-color: #000;\n    position: absolute;\n    top:35%;\n    left:50%;\n    transform: translate(-50%,-50%) rotate(-45deg);\n}\n.control__panel-left::after{\n    content: \"\";\n    width: 50%;\n    height: 1px;\n    border-radius: 20px;\n    background-color: #000;\n    position: absolute;\n    top:69%;\n    left:50%;\n    transform: translate(-50%,-50%) rotate(45deg);\n}\n.control__panel-right::before{\n    content: \"\";\n    width: 50%;\n    height: 1px;\n    border-radius: 20px;\n    background-color: #000;\n    position: absolute;\n    top:35%;\n    left:50%;\n    transform: translate(-50%,-50%) rotate(45deg);\n}\n.control__panel-right::after{\n    content: \"\";\n    width: 50%;\n    height: 1px;\n    border-radius: 20px;\n    background-color: #000;\n    position: absolute;\n    top:69%;\n    left:50%;\n    transform: translate(-50%,-50%) rotate(-45deg);\n}\n.control__panel-select_date{\n    height: auto;\n    width: 100px;\n    display: inline-block;\n    font-size: 19px;\n    vertical-align: top;\n    margin-top: 4px;\n}\n.input__date{\n    width:100%;\n    outline: none;\n    height: 25px;\n    font-size: 23px;\n    border: 0.5px solid #d7d2fb;\n    text-align: center;\n}\n", ""]);
 
 	// exports
 
@@ -11984,14 +11984,13 @@
 	    props: ['value'],
 	    methods: {
 	        updateValue: function updateValue(value) {
-	            console.log(value);
 	            this.$emit('input', value);
 	        },
 	        MarginForDayOfWeek: function MarginForDayOfWeek() {
 	            var date = new Date(this.currentYear, this.currentMonth, 1).getDay();
 	            var a = [];
 	            for (var j = 1; j < date; j++) {
-	                a.push("");
+	                a.push('\xA0');
 	            }
 	            this.DayArray = a.concat(this.DayArray);
 	        },
@@ -12024,6 +12023,8 @@
 	        setDay: function setDay(day) {
 	            this.currentDay = day;
 	            this.setValueOnInput();
+	            this.createDayArray();
+	            this.MarginForDayOfWeek();
 	            this.showTimeWindow();
 	        },
 	        dayInMonth: function dayInMonth() {
@@ -12055,7 +12056,11 @@
 	        createDayArray: function createDayArray() {
 	            var j = [];
 	            for (var i = 1; i <= this.dayInMonth(); i++) {
-	                j.push(i);
+	                if (this.currentDay == i) {
+	                    j.push({ day: i, current: true });
+	                } else {
+	                    j.push({ day: i, current: false });
+	                }
 	            }
 	            this.DayArray = j;
 	        }
@@ -12071,7 +12076,7 @@
 /* 11 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n    <div class=\"datePicker__container\">\n        <input class=\"input__date\" type=\"text\"  @click=\"showTimeWindow()\" v-model=\"inputValue\n\" readonly >\n        <div class=\"time-window\" v-if=\"modalOpen\">\n            <div class=\"control__panel\">\n                <button class=\"control__panel-left\" @click=\"minusMonth()\"></button>\n                <span class=\"control__panel-select_date\">\n                {{ inputValue }}\n                </span>\n                <button class=\"control__panel-right\" @click=\"plusMonth()\"></button>\n            </div>\n            <div class=\"day__table\">\n                <button class=\"day__table-item\" v-for=\"week in DayOfWeek\">{{week}}</button>\n                <button class=\"day__table-item\" v-for=\"day in DayArray\" @click=\"setDay(day)\">{{ day }}</button>\n            </div>\n        </div>\n    </div>\n";
+	module.exports = "\n    <div class=\"datePicker__container\">\n        <input class=\"input__date\" type=\"text\"  @click=\"showTimeWindow()\" v-model=\"inputValue\n\" readonly >\n        <div class=\"time-window\" v-if=\"modalOpen\">\n            <div class=\"control__panel\">\n                <button class=\"control__panel-left\" @click=\"minusMonth()\"></button>\n                <span class=\"control__panel-select_date\">\n                {{ inputValue }}\n                </span>\n                <button class=\"control__panel-right\" @click=\"plusMonth()\"></button>\n            </div>\n            <div class=\"day__table\">\n                <button class=\"day__table-item\" v-for=\"week in DayOfWeek\">{{week}}</button>\n                <button class=\"day__table-item\" v-for=\"day in DayArray\" v-bind:class=\"{isDayActive:day.current}\" @click=\"setDay(day.day)\">{{ day.day }}</button>\n            </div>\n        </div>\n    </div>\n";
 
 /***/ })
 /******/ ]);
